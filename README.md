@@ -1,41 +1,21 @@
-<<<<<<< HEAD
-# AI & Data Science Research Portfolio
+# Medical Informatics: Stochastic Representation of Healthcare Costs
 **Srijan S. Kotian | Computer Science & Engineering**
 
-## ?? Project 1: Financial Fraud Detection
-- Model: XGBoost + SMOTE
-- Metric: 1.00 Precision, Recall, and F1-Score
+##  Research Abstract
+This project explores the intersection of ensemble learning and healthcare economics. By utilizing a **Random Forest Regressor**, the system transitions from point-estimation to **uncertainty quantification** in medical cost forecasting. The primary objective is to demonstrate a robust, interpretable framework for clinical decision support.
 
-## ?? Project 2: Medical Insurance Cost Prediction
-- Model: Random Forest Regressor
-- Metric: 0.87 R2 Score
-=======
-# 🩺 Medical Insurance Cost Analytics & Deployment
-**Srijan S. Kotian | Computer Science & Engineering**
+##  Methodology & Statistical Rigor
+- **Algorithm:** Random Forest Ensemble (100 Decision Trees).
+- **Validation:** 5-Fold Cross-Validation to ensure model generalization across heterogeneous patient cohorts.
+- **Ethics & Bias Mitigation:** Implemented **One-Hot Encoding** for categorical variables (Region/Sex) to prevent ordinal bias.
+- **Uncertainty Quantification:** Calculated the standard deviation across ensemble estimators to provide a confidence interval (CI) for every prediction.
 
-An end-to-end Machine Learning project focused on predicting healthcare premiums and deploying a user-facing analytical dashboard.
+## 📊 Performance Benchmarks
+- **Mean Absolute Error (MAE):** $2,549.34 (Average deviation in premium estimation).
+- **R² Score:** 0.8652 (Strong correlation between biomarkers and costs).
+- **Cross-Validation Accuracy:** 83.60% (± 6.49% variance), ensuring model stability across cohorts.
 
-## 🚀 Project Overview
-This project leverages a **Random Forest Regressor** to analyze patient biomarkers and lifestyle choices, providing accurate annual insurance cost estimates.
-
-### 📊 Model Performance
-- **Algorithm:** Random Forest (Ensemble Learning)
-- **R2 Score:** **0.87** - **Key Features:** Successfully identified **Smoking Status** and **BMI** as the highest-weight variables in determining medical risk and cost.
-
-## 💻 Technical Implementation
-- **Exploratory Data Analysis (EDA):** Visualized correlations between age, region, and BMI.
-- **Model Training:** Hyperparameter tuning of a Random Forest regressor via Scikit-learn.
-- **Deployment (Upcoming):** Interactive web application built with **Streamlit** for real-time cost estimation.
-
-## 📈 Results Visualization
-The following feature importance plot highlights the primary drivers identified by the model during training:
-
-![Medical Cost Drivers](feature_importance.png)
-
-## 🛠️ Requirements
-- Python 3.10+
-- Scikit-learn
-- Pandas
-- Matplotlib
-- Streamlit (for deployment)
->>>>>>> 16be6b4 (Updated README: Focused on core regression and deployment)
+## ⚠️ Limitations & Future Work
+1. **Domain Gap:** The current model is trained on US-centric data; future iterations require fine-tuning on European (GDPR-compliant) datasets.
+2. **Feature Scarcity:** Inclusion of longitudinal biomarkers and diagnostic history would reduce prediction variance.
+3. **Model Selection:** Exploring Gradient Boosting (XGBoost) vs. Neural Networks for latent feature extraction.
